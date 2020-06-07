@@ -1,0 +1,17 @@
+{
+    "target_schema": "targetschema",
+    "target_table": "targettable",
+    "column_mappings": [
+  {"source_column": "column1"},
+  {"source_column": "column2"}
+  ],
+  "partition_info": {
+      "column_name": "partitioncolumn",
+      "num_partitions": 16,
+      "lower_bound": "0",
+      "upper_bound": "16",
+      "drop_partition_column":true
+    },
+    "fetch_size": 600,
+    "truncate_load":false
+  }

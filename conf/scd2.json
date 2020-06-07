@@ -1,0 +1,20 @@
+{
+    "scd_id": "scdid",
+    "target_table_name": "targettable",
+    "target_table_schema": "targetschema", 
+    "target_table_sk": "targettable_sk",
+    "sequence_name_of_sk": "SEQ_tablename",
+    "keys": [ "keycolumn" ],
+    "scd_columns": [
+      {"name":"col1","scd_type":1},
+      {"name":"col2","scd_type":1},
+      {"name":"col3","scd_type":2},
+      {"name":"col3","scd_type":2}
+    ],
+    "extra_columns": {
+      "effective_date": "EFFECTIVE_DATE",
+      "expiry_date": "EXPIRY_DATE",
+      "current_flag": "IS_CURRENT"
+    },
+    "usedDateForFreshRecord": "1970-01-01 00:00:00"
+  }

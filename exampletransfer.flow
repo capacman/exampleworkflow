@@ -1,0 +1,36 @@
+nodes:
+  - name: mysqltransfer
+    type: transfer
+    config:
+      subtype: spark
+      conf: conf/transfer1.json
+      source: main_0
+      target: main_0
+      explain_only: false
+      empty_source_check: true
+      target_table: dbapi.connectionmetadata
+      source_table: dbapi.connectionmetadata
+    dependsOn: []
+  - name: SCD2
+    type: scd
+    config:
+      subtype: spark
+      conf: conf/scd2.json
+      target: hive
+      explain_only: false
+      target_table: default.dim_connectionmetadata
+      source_table: default.product_orc
+    dependsOn: []
+  - name: fdlskfhsdlkfsdhkfjds
+    type: transfer
+    config:
+      subtype: spark
+      conf: conf/fdlskfhsdlkfsdhkfjds.json
+      source: fdlskfhsdlkfsdhkfjdsSource
+      target: fdlskfhsdlkfsdhkfjdsTarget
+      source_table: fdlskfhsdlkfsdhkfjdsTable
+      sql_file: sql/fdlskfhsdlkfsdhkfjds.sql
+      explain_only: false
+      empty_source_check: true
+    dependsOn: []
+config: {}
