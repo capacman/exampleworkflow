@@ -1,5 +1,5 @@
 nodes:
-  - name: mysqltransfer
+  - name: mysqltransferchanged
     type: transfer
     config:
       subtype: spark
